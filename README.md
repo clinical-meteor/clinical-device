@@ -1,10 +1,14 @@
-# Meteor Device-Detection
+## clinical:device
 
 Meteor Device-Detection is a smart package which features client-side device type detection & template switching with optional [meteor-router](https://github.com/tmeasday/meteor-router/) support.
 
+===============================
+### Example
+
 An example which uses this package can be found [on github](https://github.com/Mystor/meteor-device-detection-example/), and can be seen in action at [device-detection.meteor.com](http://device-detection.meteor.com).
 
-## Installation
+===============================
+### Installation
 
 Device-Detection is on [Atmosphere](http://atmosphere.meteor.com/), so you can install it very easily with [Meteorite](https://github.com/oortcloud/meteorite/).
 
@@ -14,9 +18,9 @@ $ meteor add mystor:device-detection
 
 > NOTE: Device-Detection has been updated to support 0.8.0 and Blaze. It's helpers will no longer function correctly on older versions of Meteor running Spark.
 
-## Usage
 
-### Detecting Devices
+===============================
+#### Detecting Devices
 
 Meteor Device-Detection runs only on the client.
 
@@ -40,7 +44,8 @@ If you are using Handlebars for templating, then they are also avaliable as hand
 {{#if isBot}}Bot{{/if}}
 ```
 
-### Detection Options
+===============================
+#### Detection Options
 
 Meteor Device-Detection is based off of [express-device](https://github.com/rguerreiro/express-device), this means that it supports some of the same customization options.
 
@@ -56,7 +61,8 @@ Meteor.Device.unknownUserAgentDeviceType = 'phone';
 Meteor.Device.detectDevice();
 ```
 
-### User Preferences
+===============================
+#### User Preferences
 
 If you are offering a different user experience to users who are on different devices, it is usually a good idea to offer them the option to change the experience which they are experiencing.  Device-Detection makes this easy by giving access to a few functions to set user preferences.
 
@@ -77,7 +83,8 @@ You can also get whether the user has a preference by calling
 Meteor.Device.hasPreference();
 ```
 
-### Templates
+===============================
+#### Templates
 
 A common use case for device detection is to serve a different user experience to the user based on what their device type is.  This will often involve different templates to be displayed to the user.
 
@@ -116,35 +123,17 @@ Meteor.Device.setDesktopSuffix('_desktop');
 Meteor.Device.setBotSuffix('_bot');
 ```
 
+===============================
 #### Meteor-Router Integration
 
 If you are using [meteor-router](https://github.com/tmeasday/meteor-router/), you can also call `{{> deviceRender}}` with no parameters.  If you do this, deviceRouter will default to using `Meteor.Router.page()` as the template name.
 
-## Contributing
+===============================
+#### Contributing
 
 If you have any ideas on how to improve this project, or any bug fixes or corrections to make, plase fork and make a pull request.  I am always open to new improvements.
 
-## License
+===============================
+#### Licensing  
 
-(The MIT License)
-
-Copyright (c) 2013 Michael Layzell
-
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-'Software'), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
