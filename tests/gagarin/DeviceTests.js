@@ -4,13 +4,13 @@ describe('clinical:device', function () {
 
   it('Should exist on the client', function () {
     return client.execute(function () {
-      expect(Device).not.to.be.empty;
+      expect(Device).to.exist;
     });
   });
 
-  it('Should exist on the server', function () {
+  it('Should not exist on the server', function () {
     return server.execute(function () {
-      expect(Device).not.to.be.empty;
+      expect(Device).to.not.exist;
     });
   });
 
