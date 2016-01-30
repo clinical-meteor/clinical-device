@@ -1,8 +1,8 @@
-if (typeof UI !== 'undefined') {
+if (typeof Template !== 'undefined') {
   /*
    * Template Rendering Shortcut
    */
-  UI.registerHelper('deviceRender', function() {
+  Template.registerHelper('deviceRender', function() {
     var name = this;
     if (! _.isString(name)) {
       // If meteor-router is installed, no passed name will load Meteor.Router.page()
@@ -29,28 +29,27 @@ if (typeof UI !== 'undefined') {
       return null;
     }
   });
-  
+
   /*
    * Device Type Helpers
    */
-  UI.registerHelper('isTV', function() {
+  Template.registerHelper('isTV', function() {
     return Meteor.Device.isTV();
   });
-  UI.registerHelper('isTablet', function() {
+  Template.registerHelper('isTablet', function() {
     return Meteor.Device.isTablet();
   });
-  UI.registerHelper('isPhone', function() {
+  Template.registerHelper('isPhone', function() {
     return Meteor.Device.isPhone();
   });
-  UI.registerHelper('isDesktop', function() {
+  Template.registerHelper('isDesktop', function() {
     return Meteor.Device.isDesktop();
   });
-  UI.registerHelper('isBot', function() {
+  Template.registerHelper('isBot', function() {
     return Meteor.Device.isBot();
   });
 
-  UI.registerHelper('device_type', function() {
+  Template.registerHelper('device_type', function() {
     return Meteor.Device.type();
   });
 }
-

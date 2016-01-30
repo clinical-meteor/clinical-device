@@ -228,10 +228,11 @@
     })();
 
     this._deps.changed();
-  }
+  };
 
 
   Meteor.Device = new Device;
   Meteor.Device.detectDevice();
-})();
 
+  Device = Meteor.Device;
+})();
