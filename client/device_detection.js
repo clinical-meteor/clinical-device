@@ -1,14 +1,14 @@
 Device = function () {
   // Constructor
-  this._deps = new Deps.Dependency;
+  this._deps = new Tracker.Dependency;
   this._type = 'desktop';
 
   this._suffix_deps = {
-    tv: new Deps.Dependency,
-    tablet: new Deps.Dependency,
-    phone: new Deps.Dependency,
-    desktop: new Deps.Dependency,
-    bot: new Deps.Dependency
+    tv: new Tracker.Dependency,
+    tablet: new Tracker.Dependency,
+    phone: new Tracker.Dependency,
+    desktop: new Tracker.Dependency,
+    bot: new Tracker.Dependency
   };
 
   this._suffix = {
